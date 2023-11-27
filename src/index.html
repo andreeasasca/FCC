@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<script type="module" src="./script.js"></script>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header><i class='bx bx-left-arrow-alt'></i>Starea vremii pentru astazi,<span>&nbsp;</span><span id='date-time'></span></header>
+      <section class="input-part">
+        <p class="info-txt"></p>
+        <div class="content">
+          <input type="text" spellcheck="false" placeholder="Introdu numele orasului" required>
+          <button class="custom-location">OK</button>
+          <div class="separator"></div>
+          <button class="current-location">Trimite locatia curenta</button>
+        </div>
+      </section>
+      <section class="weather-part">
+        <div class="weather-summary">
+          <img src="" alt="Weather Icon">
+          <div class="temp">
+            <span class="numb">_</span>
+            <span class="deg">°</span>C
+          </div>
+          <div class="weather">_ _</div>
+          <div class="location">
+            <i class='bx bx-map'></i>
+            <span>_, _</span>
+          </div>
+        </div> 
+        <div class="weather-details">
+          <div class="column feels">
+            <i class='bx bxs-thermometer'></i>
+            <div class="details">
+              <div class="temp">
+                <span class="numb-2">_</span>
+                <span class="deg">°</span>C
+              </div>
+              <p>Temperatura resimtita</p>
+            </div>
+          </div>
+          <div class="column humidity">
+            <i class='bx bxs-droplet-half'></i>
+            <div class="details">
+              <span>_</span>
+              <p>Umiditatea</p>
+            </div>
+          </div>
+          <div class="column pressure">
+            <i class='bx bxs-stopwatch'></i>
+            <div class="details">
+              <span>_</span>
+              <p>Presiunea</p>
+            </div>
+          </div>
+          <div class="column sunrise">
+            <i class='bx bxs-sun'></i>
+            <div class="details">
+              <span>_</span>
+              <p>Rasaritul soarelui</p>
+            </div>
+          </div>
+          <div class="column sunset">
+            <i class='bx bxs-moon'></i>
+            <div class="details">
+              <span>_</span>
+              <p>Apusul soarelui</p>
+            </div>
+          </div>
+          <div class="column speed">
+            <i class='bx bx-wind'></i>
+            <div class="details">
+              <span>_</span>
+              <p>Viteza vantului</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 15%) 0%,
+      rgb(135 135 135) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgb(255 255 255 / 40%) 120%
+      )
+      #ffffff;
+  background-blend-mode: multiply, multiply;
+  font-family: "Open Sans", sans-serif;
+}
+.wrapper {
+  width: 600px;
+  background: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+  border-radius: 20px;
+}
+.wrapper header {
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  color: #c4e6ff;
+  padding: 16px 15px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+header i {
+  font-size: 0em;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.wrapper.active header i {
+  margin-left: 5px;
+  font-size: 30px;
+}
+.wrapper header.hidden {
+  display: none;
+}
+.wrapper .input-part {
+  margin: 20px 25px 30px;
+  text-align: center;
+}
+.wrapper.active .input-part {
+  display: none;
+}
+.input-part .info-txt {
+  display: none;
+  font-size: 17px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+.input-part .info-txt.error {
+  color: #721c24;
+  display: block;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+.input-part .info-txt.pending {
+  color: #0c5460;
+  display: block;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+.input-part :where(input, button) {
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 20px;
+}
+.input-part input {
+  text-align: center;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+}
+.input-part .separator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background: #d1d1d1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3;
+}
+.separator::before {
+  content: "sau";
+  color: #333232;
+  font-size: 15px;
+  padding: 0 7px;
+  background: #d1d1d1;
+  border-radius: 20px;
+}
+.input-part button.custom-location {
+  width: 20%;
+  height: 30px;
+  margin: 2px;
+  color: #333232;
+  cursor: pointer;
+  background: linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 15%) 0%,
+      rgb(135 135 135) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgb(255 255 255 / 40%) 120%
+      )
+      #ffffff;
+  background-blend-mode: multiply, multiply;
+  transition: 0.3s ease;
+}
+.input-part button {
+  color: #333232;
+  cursor: pointer;
+  background: linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 15%) 0%,
+      rgb(135 135 135) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgb(255 255 255 / 40%) 120%
+      )
+      #ffffff;
+  background-blend-mode: multiply, multiply;
+  transition: 0.3s ease;
+}
+.input-part button:hover {
+  background: linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 15%) 0%,
+      rgb(78 78 78) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgb(255 255 255 / 40%) 120%
+      )
+      #d1d1d1;
+  background-blend-mode: multiply, multiply;
+  color: #ffffff;
+}
+
+.wrapper .weather-part {
+  display: none;
+  margin: 30px 0 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrapper.active .weather-part {
+  display: flex;
+}
+.weather-part img {
+  max-width: 125px;
+  margin: -13px 44px 15px;
+}
+.weather-part .temp {
+  display: flex;
+  font-weight: 500;
+  font-size: 72px;
+  color: #c4e6ff;
+  margin: -38px 45px 15px;
+}
+.weather-part .temp .numb {
+  font-weight: 600;
+}
+.weather-part .temp .deg {
+  font-size: 40px;
+  display: block;
+  margin: 10px 5px 0 0;
+}
+.weather-part .weather {
+  font-size: 21px;
+  text-align: center;
+  margin: -5px 20px 15px;
+}
+.weather-part .location {
+  display: flex;
+  font-size: 19px;
+  padding: 0 40px;
+  text-align: center;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+.location i {
+  font-size: 22px;
+  margin: 4px 5px 0 0;
+}
+.weather-details {
+  display: flex;
+  width: 900px;
+  height: 150px;
+  align-items: center;
+}
+.column {
+  position: absolute;
+  display: flex;
+  border: 1px solid #c4e6ff;
+  border-radius: 20px;
+  height: 67px;
+  padding: 0 7px 0 3px;
+  table-layout: fixed;
+  width: 214px;
+}
+.column i {
+  flex-basis: auto;
+  color: #c4e6ff;
+  font-size: 40px;
+  margin-top: 13px;
+}
+.column.feels {
+  left: 350px; 
+  top: 171px;
+}
+.column.pressure {
+  left: 350px; 
+  top: 330px;
+  width: 140px;
+}
+.column.sunrise {
+  left: 350px; 
+  top: 460px;
+}
+.column.speed {
+  right: 350px; 
+  top: 171px;
+}
+.column.humidity {
+  right: 350px; 
+  top: 330px;
+  width: 140px;
+}
+.column.sunset {
+  right: 350px; 
+  top: 460px;
+}
+.details .temp,
+.details span {
+  font-size: 16px;
+  font-weight: 100;
+  color: #c4e6ff;
+  display: flex;
+  margin: 2px 0px 1px;
+}
+.details .temp .deg {
+  margin: 0;
+  font-size: 17px;
+  padding: 0 2px 0 1px;
+}
+.column .details p {
+  font-size: 14px;
+  margin-top: 11px;
+  color: #0e2536;
+}
